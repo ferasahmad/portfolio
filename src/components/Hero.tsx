@@ -27,8 +27,9 @@ const useStyles = makeStyles({
     flexDirection: "column",
     width: "100%",
     height: "100%",
-    background: "blue",
-    textTransform: "uppercase"
+    background: "black",
+    textTransform: "uppercase",
+    color: "white"
   },
   title: {
     fontFamily: "MajorMonoDisplay",
@@ -36,7 +37,11 @@ const useStyles = makeStyles({
     margin: 0
   },
   text: {
-    margin: "21px",
+    margin: "20px",
+    fontSize: "14px",
+    // fontFamily: "MajorMonoDisplay",
+    textAlign: "center",
+    letterSpacing: 10,
     fontWeight: 500
   },
   buttonsContainer: {
@@ -45,9 +50,10 @@ const useStyles = makeStyles({
   button: {
     margin: "12px",
     marginTop: 0,
-    borderWidth: '1px',
-    borderColor: "black",
-    borderStyle: "solid"
+    borderWidth: '0.5px',
+    borderColor: "white",
+    borderStyle: "solid",
+    color: "white"
   },
 });
 
