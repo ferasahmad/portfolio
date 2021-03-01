@@ -3,11 +3,17 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 
+// @ts-ignore
+import CloudsVideo from "../assets/videos/clouds.mp4";
+
 function Hero() {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
+      <video className={classes.video} autoPlay loop muted>
+        <source src={CloudsVideo} type='video/mp4' />
+      </video>
       <h1 className={classes.title}>FERAS AHMAD</h1>
       <p className={classes.text}>Front-end Developer</p>
       <div className={classes.buttonsContainer}>
@@ -27,7 +33,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     width: "100%",
     height: "100%",
-    background: "black",
+    background: "transparent",
     textTransform: "uppercase",
     color: "white"
   },
@@ -36,10 +42,13 @@ const useStyles = makeStyles({
     fontSize: "60px",
     margin: 0
   },
+  video: {
+    position: "absolute",
+    zIndex: -1
+  },
   text: {
     margin: "20px",
     fontSize: "14px",
-    // fontFamily: "MajorMonoDisplay",
     textAlign: "center",
     letterSpacing: 10,
     fontWeight: 500

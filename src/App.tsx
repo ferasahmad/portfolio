@@ -13,10 +13,10 @@ function App() {
 
   return (
     <div className={classes.container}>
-      <Hero />
-      <About />
-      <Work />
-      <Contact />
+        <Hero />
+        <About />
+        <Work />
+        <Contact />
     </div>
   );
 }
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   container: {
     width: "100%",
     height: "100%",
-    background: "red",
+    background: "transparent",
     fontFamily: "DMSans"
   },
 });
