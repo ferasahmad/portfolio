@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { makeStyles } from '@material-ui/core/styles';
+
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Work from "./components/Work";
+import Contact from "./components/Contact";
+
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <Hero />
+      <About />
+      <Work />
+      <Contact />
     </div>
   );
 }
+
+const useStyles = makeStyles({
+  container: {
+    width: "100%",
+    height: "100%",
+    background: "red",
+    fontFamily: "DMSans"
+  },
+});
 
 export default App;
