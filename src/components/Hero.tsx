@@ -3,11 +3,14 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 
+import Grain from "../assets/grain.png";
+
 function Hero() {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
+        <img src={Grain} alt="" className={classes.grain} />
         <video className={classes.video} autoPlay loop muted>
           <source src="https://i.imgur.com/2Ly7hFD.mp4" type='video/mp4' />
         </video>
@@ -52,6 +55,13 @@ const useStyles = makeStyles({
     position: "absolute",
     objectFit: "cover",
     zIndex: -1
+  },
+  grain: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    objectFit: "cover",
+    opacity: "0.5"
   },
   text: {
     margin: "20px",
