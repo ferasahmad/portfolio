@@ -12,7 +12,7 @@ function Hero() {
   return (
     <div className={classes.container}>
         <video className={classes.video} autoPlay loop muted>
-          <source src={CloudsVideo} type='video/mp4' />
+          <source src="https://i.imgur.com/2Ly7hFD.mp4" type='video/mp4' />
         </video>
         <h1 className={classes.title}>FERAS AHMAD</h1>
         <p className={classes.text}>Front-end Developer</p>
