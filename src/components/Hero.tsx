@@ -11,16 +11,16 @@ function Hero() {
 
   return (
     <div className={classes.container}>
-      <video className={classes.video} autoPlay loop muted>
-        <source src={CloudsVideo} type='video/mp4' />
-      </video>
-      <h1 className={classes.title}>FERAS AHMAD</h1>
-      <p className={classes.text}>Front-end Developer</p>
-      <div className={classes.buttonsContainer}>
-        <Button className={classes.button}>about</Button>
-        <Button className={classes.button}>work</Button>
-        <Button className={classes.button}>contact</Button>
-      </div>
+        <video className={classes.video} autoPlay loop muted>
+          <source src={CloudsVideo} type='video/mp4' />
+        </video>
+        <h1 className={classes.title}>FERAS AHMAD</h1>
+        <p className={classes.text}>Front-end Developer</p>
+        <div className={classes.buttonsContainer}>
+          <Button className={classes.button}>about</Button>
+          <Button className={classes.button}>work</Button>
+          <Button className={classes.button}>contact</Button>
+        </div>
     </div>
   );
 }
@@ -38,12 +38,16 @@ const useStyles = makeStyles({
     color: "white"
   },
   title: {
+    zIndex: 100,
     fontFamily: "MajorMonoDisplay",
     fontSize: "60px",
     margin: 0
   },
   video: {
+    width: "100%",
+    height: "100%",
     position: "absolute",
+    objectFit: "cover",
     zIndex: -1
   },
   text: {
