@@ -41,7 +41,13 @@ const useStyles = makeStyles({
     zIndex: 100,
     fontFamily: "MajorMonoDisplay",
     fontSize: "60px",
-    margin: 0
+    margin: 0,
+    '@media(max-width: 540px)': {
+      fontSize: "50px",
+    },
+    '@media(max-width: 450px)': {
+      fontSize: "40px",
+    }
   },
   video: {
     width: "100%",
@@ -52,10 +58,15 @@ const useStyles = makeStyles({
   },
   text: {
     margin: "20px",
+    marginLeft: "25px",
     fontSize: "14px",
     textAlign: "center",
     letterSpacing: 10,
-    fontWeight: 500
+    fontWeight: 500,
+    '@media(max-width: 450px)': {
+      letterSpacing: 8,
+      fontSize: "12px",
+    }
   },
   buttonsContainer: {
     display: "flex",
