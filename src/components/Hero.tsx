@@ -3,9 +3,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 
-// @ts-ignore
-import CloudsVideo from "../assets/videos/clouds.mp4";
-
 function Hero() {
   const classes = useStyles();
 
@@ -77,7 +74,8 @@ const useStyles = makeStyles({
     borderWidth: '0.5px',
     borderColor: "white",
     borderStyle: "solid",
-    color: "white"
+    color: "white",
+    fontSize: "12px",
   },
 });
 
