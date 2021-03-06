@@ -5,7 +5,13 @@ import { Button } from '@material-ui/core';
 
 import Grain from "../assets/grain.png";
 
-function Hero() {
+interface HeroProps {
+  onClickAbout: () => void;
+  onClickWork: () => void;
+  onClickContact: () => void;
+}
+
+function Hero({onClickAbout, onClickWork, onClickContact}: HeroProps) {
   const classes = useStyles();
 
   return (
@@ -17,9 +23,9 @@ function Hero() {
         <h1 className={classes.title}>FERAS AHMAD</h1>
         <p className={classes.text}>Front-end Developer</p>
         <div className={classes.buttonsContainer}>
-          <Button className={classes.button}>about</Button>
-          <Button className={classes.button}>work</Button>
-          <Button className={classes.button}>contact</Button>
+          <Button onClick={onClickAbout} className={classes.button}>about</Button>
+          <Button onClick={onClickWork} className={classes.button}>work</Button>
+          <Button onClick={onClickContact} className={classes.button}>contact</Button>
         </div>
     </div>
   );

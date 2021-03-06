@@ -7,6 +7,7 @@ function About() {
 
   return (
     <div className={classes.container}>
+      ABOUT
     </div>
   );
 }
