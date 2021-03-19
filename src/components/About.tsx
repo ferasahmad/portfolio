@@ -2,6 +2,7 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Me from "../assets/me-2.jpg";
+import Mountain from "../assets/mountain.png";
 
 function About() {
   const classes = useStyles();
@@ -9,14 +10,13 @@ function About() {
   return (
     <div className={classes.container}>
       <img src={Me} alt="" className={classes.me}/>
+      <img src={Mountain} alt="" className={classes.mountain}/>
       <div className={classes.textContainer}>
         <p className={classes.text1}>
           Hi, I'm Feras 
         </p>
         <p className={classes.text2}>
-          <mark className={classes.highlight}>
-            Passionate and detail orientated Front-end Developer with almost 3 years  of experience building responsive web applications. Specializing in ReactJS and React Native and other similar frameworks.
-          </mark>
+          Passionate and detail orientated Front-end Developer with almost 3 years  of experience building responsive web applications. Specializing in ReactJS and React Native and other similar frameworks.
         </p>
       </div>
     </div>
@@ -34,6 +34,11 @@ const useStyles = makeStyles({
     position: "relative",
     padding: "32px",
     boxSizing: "border-box"
+  },
+  mountain: {
+    width: "100%",
+    position: "absolute",
+    bottom: 0,
   },
   textContainer:{
     marginLeft: "64px", 
