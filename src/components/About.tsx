@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Me from "../assets/me-2.jpg";
 import Mountain from "../assets/mountain.png";
+import MountainCropped from "../assets/mountain-cropped.png";
 
 function About() {
   const classes = useStyles();
@@ -11,6 +12,7 @@ function About() {
     <div className={classes.container}>
       <img src={Me} alt="" className={classes.me}/>
       <img src={Mountain} alt="" className={classes.mountain}/>
+      <img src={MountainCropped} alt="" className={classes.mountainCropped}/>
       <div className={classes.textContainer}>
         <p className={classes.text1}>
           Hi, I'm Feras 
@@ -39,6 +41,19 @@ const useStyles = makeStyles({
     width: "100%",
     position: "absolute",
     bottom: 0,
+    display: "inline",
+    '@media(max-width: 550px)': {
+      display: "none"
+    },
+  },
+  mountainCropped: {
+    width: "100%",
+    position: "absolute",
+    bottom: 0,
+    display: "none",
+    '@media(max-width: 550px)': {
+      display: "inline"
+    },
   },
   textContainer:{
     marginLeft: "64px", 
