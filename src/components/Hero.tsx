@@ -2,6 +2,7 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
+import FadeIn from 'react-fade-in';
 
 import Grain from "../assets/grain.png";
 
@@ -20,13 +21,15 @@ function Hero({onClickAbout, onClickWork, onClickContact}: HeroProps) {
         <video className={classes.video} autoPlay loop muted>
           <source src="https://i.imgur.com/2Ly7hFD.mp4" type='video/mp4' />
         </video>
-        <h1 className={classes.title}>FERAS AHMAD</h1>
-        <p className={classes.text}>Front-end Developer</p>
-        <div className={classes.buttonsContainer}>
-          <Button onClick={onClickAbout} className={classes.button}>about</Button>
-          <Button onClick={onClickWork} className={classes.button}>work</Button>
-          <Button onClick={onClickContact} className={classes.button}>contact</Button>
-        </div>
+        <FadeIn className={classes.container} transitionDuration={900}>
+          <h1 className={classes.title}>FERAS AHMAD</h1>
+          <p className={classes.text}>Front-end Developer</p>
+          <div className={classes.buttonsContainer}>
+            <Button onClick={onClickAbout} className={classes.button}>about</Button>
+            <Button onClick={onClickWork} className={classes.button}>work</Button>
+            <Button onClick={onClickContact} className={classes.button}>contact</Button>
+          </div>
+        </FadeIn>
     </div>
   );
 }
@@ -41,7 +44,7 @@ const useStyles = makeStyles({
     height: "100%",
     background: "transparent",
     textTransform: "uppercase",
-    color: "white"
+    color: "white",
   },
   title: {
     zIndex: 100,
@@ -91,6 +94,7 @@ const useStyles = makeStyles({
     borderColor: "white",
     borderStyle: "solid",
     color: "white",
+    fontWeight: 500,
     fontSize: "12px",
   },
 });

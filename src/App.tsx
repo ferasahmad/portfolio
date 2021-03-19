@@ -36,21 +36,21 @@ function App() {
 
   return (
     <div className={classes.container}>
-        <ProgressBar bgcolor="white" />
-        <Hero 
-          onClickAbout={onClickAbout} 
-          onClickWork={onClickWork} 
-          onClickContact={onClickContact} 
-        />
-        <Element name="about" className={classes.element}>
-          <About />
-        </Element>
-        <Element name="work" className={classes.element}>
-          <Work />
-        </Element>
-        <Element name="contact" className={classes.element}>
-          <Contact />
-        </Element>
+      <ProgressBar bgcolor="white" />
+      <Hero 
+        onClickAbout={onClickAbout} 
+        onClickWork={onClickWork} 
+        onClickContact={onClickContact} 
+      />
+      <Element name="about" className={classes.element}>
+        <About />
+      </Element>
+      <Element name="work" className={classes.element}>
+        <Work />
+      </Element>
+      <Element name="contact" className={classes.element}>
+        <Contact />
+      </Element>
     </div>
   );
 }
