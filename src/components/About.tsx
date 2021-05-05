@@ -18,7 +18,7 @@ function About() {
           Hi, I'm Feras 
         </p>
         <p className={classes.text2}>
-          Passionate and detail orientated Front-end Developer with almost 3 years  of experience building responsive web applications. Specializing in ReactJS and React Native and other similar frameworks.
+          Passionate and detail orientated Front-end Developer with 3 years of experience building responsive applications specializing in ReactJS and React Native.
         </p>
       </div>
     </div>
