@@ -7,9 +7,7 @@ import Main from "./components/Main";
 function App() {
 
   useEffect(() => {
-    const response = initAmplitude();
-    console.log("response");
-    console.log(response);
+    initAmplitude();
   }, []);
 
   return (
