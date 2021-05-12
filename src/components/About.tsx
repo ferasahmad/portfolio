@@ -11,8 +11,8 @@ function About() {
   return (
     <div className={classes.container}>
       <img src={Me} alt="" className={classes.me}/>
-      <img src={Mountain} alt="" className={classes.mountain}/>
-      <img src={MountainCropped} alt="" className={classes.mountainCropped}/>
+      {/* <img src={Mountain} alt="" className={classes.mountain}/>
+      <img src={MountainCropped} alt="" className={classes.mountainCropped}/> */}
       <div className={classes.textContainer}>
         <p className={classes.text1}>
           Hi, I'm Feras 

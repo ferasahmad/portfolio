@@ -61,7 +61,7 @@ const useStyles = makeStyles({
   video: {
     width: "100%",
     height: "100%",
-    position: "absolute",
+    position: "fixed",
     objectFit: "cover",
     zIndex: -1
   },
