@@ -7,7 +7,7 @@ import Main from "./components/Main";
 function App() {
 
   useEffect(() => {
-    initAmplitude();
+    // initAmplitude();
   }, []);
 
   return (

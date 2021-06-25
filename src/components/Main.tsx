@@ -45,7 +45,7 @@ function Main() {
 
   return (
     <div className={classes.container}>
-      <ProgressBar bgcolor="white" />
+      <ProgressBar bgcolor="gray" />
       <Hero 
         onClickAbout={onClickAbout} 
         onClickWork={onClickWork} 
@@ -54,7 +54,7 @@ function Main() {
       <Element name="about" className={classes.element}>
         <About />
       </Element>
-      <Element name="work" className={classes.element}>
+      <Element name="work" style={{width: "100%"}}>
         <Work />
       </Element>
       <Element name="contact" className={classes.element}>
