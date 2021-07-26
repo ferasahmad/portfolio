@@ -45,7 +45,7 @@ function Main() {
 
   return (
     <div className={classes.container}>
-      <ProgressBar bgcolor="gray" />
+      <ProgressBar bgcolor="#45b7fe" />
       <Hero 
         onClickAbout={onClickAbout} 
         onClickWork={onClickWork} 

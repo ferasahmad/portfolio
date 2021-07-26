@@ -17,7 +17,6 @@ function Hero({onClickAbout, onClickWork, onClickContact}: HeroProps) {
 
   return (
     <div className={classes.container}>
-        <img src={Grain} alt="" className={classes.grain} />
         <video className={classes.video} autoPlay loop muted>
           <source src="https://i.imgur.com/2Ly7hFD.mp4" type='video/mp4' />
         </video>

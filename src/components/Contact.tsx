@@ -22,12 +22,14 @@ function Contact() {
         <SocialButton link="mailto:firastaf878@gmail.com" logo={GmailIcon} />
         <SocialButton link="https://twitter.com/ferastaf" logo={TwitterLogo} />
       </div>
+      <p className={classes.p}>Website made by me :)</p>
     </div>
   );
 }
 
 const useStyles = makeStyles({
   container: {
+    position: "relative",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -38,6 +40,12 @@ const useStyles = makeStyles({
   h1: {
     color: "white",
     marginBottom: "32px",
+  },
+  p: {
+    bottom: 10,
+    right: 10,
+    color: "white",
+    position: "absolute",
   },
   button: {
     margin: "12px",
