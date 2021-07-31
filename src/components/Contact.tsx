@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 import SocialButton from "../components/SocialButton";
 import LinkedInLogo from "../assets/linkedin-icon.png";
@@ -8,16 +8,17 @@ import GmailIcon from "../assets/gmail-icon.png";
 import GithubIcon from "../assets/github-icon.png";
 import TwitterLogo from "../assets/twitter-icon.png";
 
-
 function Contact() {
   const classes = useStyles();
-
 
   return (
     <div className={classes.container}>
       <h3 className={classes.h1}>CONNECT WITH ME</h3>
       <div>
-        <SocialButton link="https://www.linkedin.com/in/feras-ahmad-4900031a6" logo={LinkedInLogo} />
+        <SocialButton
+          link="https://www.linkedin.com/in/feras-ahmad-4900031a6"
+          logo={LinkedInLogo}
+        />
         <SocialButton link="https://github.com/ferasahmad" logo={GithubIcon} />
         <SocialButton link="mailto:firastaf878@gmail.com" logo={GmailIcon} />
         <SocialButton link="https://twitter.com/ferastaf" logo={TwitterLogo} />
@@ -52,7 +53,7 @@ const useStyles = makeStyles({
     width: "70px",
     height: "70px",
     marginTop: 0,
-    borderWidth: '0.5px',
+    borderWidth: "0.5px",
     borderRadius: "35px",
     borderColor: "white",
     borderStyle: "solid",

@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
-import FadeIn from 'react-fade-in';
+import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
+import FadeIn from "react-fade-in";
 
-import Grain from "../assets/grain.png";
+// @ts-ignore
+import Clouds from "../assets/clouds.mp4";
+// @ts-ignore
+import Birds from "../assets/birds.mp4";
+// @ts-ignore
+import Mountain from "../assets/mountain.mp4";
 
 interface HeroProps {
   onClickAbout: () => void;
@@ -12,23 +17,29 @@ interface HeroProps {
   onClickContact: () => void;
 }
 
-function Hero({onClickAbout, onClickWork, onClickContact}: HeroProps) {
+function Hero({ onClickAbout, onClickWork, onClickContact }: HeroProps) {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
-        <video className={classes.video} autoPlay loop muted>
-          <source src="https://i.imgur.com/2Ly7hFD.mp4" type='video/mp4' />
-        </video>
-        <FadeIn className={classes.container} transitionDuration={900}>
-          <h1 className={classes.title}>FERAS AHMAD</h1>
-          <p className={classes.text}>Front-end Developer</p>
-          <div className={classes.buttonsContainer}>
-            <Button onClick={onClickAbout} className={classes.button}>about</Button>
-            <Button onClick={onClickWork} className={classes.button}>work</Button>
-            <Button onClick={onClickContact} className={classes.button}>contact</Button>
-          </div>
-        </FadeIn>
+      <video className={classes.video} autoPlay loop muted>
+        <source src={Clouds} type="video/mp4" />
+      </video>
+      <FadeIn className={classes.container} transitionDuration={900}>
+        <h1 className={classes.title}>FERAS AHMAD</h1>
+        <p className={classes.text}>Front-end Developer</p>
+        <div className={classes.buttonsContainer}>
+          <Button onClick={onClickAbout} className={classes.button}>
+            about
+          </Button>
+          <Button onClick={onClickWork} className={classes.button}>
+            work
+          </Button>
+          <Button onClick={onClickContact} className={classes.button}>
+            contact
+          </Button>
+        </div>
+      </FadeIn>
     </div>
   );
 }
@@ -44,32 +55,33 @@ const useStyles = makeStyles({
     background: "transparent",
     textTransform: "uppercase",
     color: "white",
+    position: "relative",
   },
   title: {
     zIndex: 100,
     fontFamily: "MajorMonoDisplay",
     fontSize: "60px",
     margin: 0,
-    '@media(max-width: 540px)': {
+    "@media(max-width: 540px)": {
       fontSize: "50px",
     },
-    '@media(max-width: 450px)': {
+    "@media(max-width: 450px)": {
       fontSize: "40px",
-    }
+    },
   },
   video: {
     width: "100%",
     height: "100%",
-    position: "fixed",
+    position: "absolute",
     objectFit: "cover",
-    zIndex: -1
+    zIndex: -2,
   },
   grain: {
     width: "100%",
     height: "100%",
     position: "absolute",
     objectFit: "cover",
-    opacity: "0.5"
+    opacity: "0.5",
   },
   text: {
     margin: "20px",
@@ -78,10 +90,10 @@ const useStyles = makeStyles({
     textAlign: "center",
     letterSpacing: 10,
     fontWeight: 500,
-    '@media(max-width: 450px)': {
+    "@media(max-width: 450px)": {
       letterSpacing: 8,
       fontSize: "12px",
-    }
+    },
   },
   buttonsContainer: {
     display: "flex",
@@ -89,7 +101,7 @@ const useStyles = makeStyles({
   button: {
     margin: "12px",
     marginTop: 0,
-    borderWidth: '0.5px',
+    borderWidth: "0.5px",
     borderColor: "white",
     borderStyle: "solid",
     color: "white",

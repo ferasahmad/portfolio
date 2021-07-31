@@ -11,12 +11,17 @@ import {
   TimelineContent,
 } from "@material-ui/lab";
 import { Paper } from "@material-ui/core";
+// @ts-ignore
+import Birds from "../assets/birds.mp4";
 
 function Work() {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
+      <video className={classes.video} autoPlay loop muted>
+        <source src={Birds} type="video/mp4" />
+      </video>
       <div>
         <Timeline align="alternate">
           <TimelineItem>
@@ -153,12 +158,21 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    background: "black",
+    // background: "gray",
+    position: "relative",
+  },
+  video: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    objectFit: "cover",
+    zIndex: -1,
   },
   timelineItem: {
     padding: "50px",
     textAlign: "left",
     backgroundColor: "white !important",
+    color: "black",
   },
   // v1appsContainer: {
   //   background:
@@ -174,7 +188,6 @@ const useStyles = makeStyles({
   companyName: {
     fontFamily: "MajorMonoDisplay",
     fontSize: "30px",
-    color: "black",
   },
   listItem: {
     marginBottom: "10px",
