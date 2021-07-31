@@ -7,12 +7,17 @@ import LinkedInLogo from "../assets/linkedin-icon.png";
 import GmailIcon from "../assets/gmail-icon.png";
 import GithubIcon from "../assets/github-icon.png";
 import TwitterLogo from "../assets/twitter-icon.png";
+// @ts-ignore
+import Clouds from "../assets/clouds.mp4";
 
 function Contact() {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
+      <video className={classes.video} autoPlay loop muted>
+        <source src={Clouds} type="video/mp4" />
+      </video>
       <h3 className={classes.h1}>CONNECT WITH ME</h3>
       <div>
         <SocialButton
@@ -39,13 +44,20 @@ const useStyles = makeStyles({
     height: "100%",
   },
   h1: {
-    color: "white",
+    color: "black",
     marginBottom: "32px",
+  },
+  video: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    objectFit: "cover",
+    zIndex: -2,
   },
   p: {
     bottom: 10,
     right: 10,
-    color: "white",
+    color: "black",
     position: "absolute",
   },
   button: {
@@ -55,9 +67,9 @@ const useStyles = makeStyles({
     marginTop: 0,
     borderWidth: "0.5px",
     borderRadius: "35px",
-    borderColor: "white",
+    borderColor: "black",
     borderStyle: "solid",
-    color: "white",
+    color: "black",
     fontWeight: 500,
     fontSize: "12px",
   },

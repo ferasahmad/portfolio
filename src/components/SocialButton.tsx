@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 
-
-function SocialButton({ link, logo }: {link: string, logo: string}) {
+function SocialButton({ link, logo }: { link: string; logo: string }) {
   const classes = useStyles();
 
   const onClick = () => {
-    window.open(link, "_blank")
+    window.open(link, "_blank");
   };
 
   return (
-    <Button onClick={() => onClick()} className={classes.button}><img className={classes.image} src={logo} alt="" /></Button>
+    <Button onClick={() => onClick()} className={classes.button}>
+      <img className={classes.image} src={logo} alt="" />
+    </Button>
   );
 }
 
@@ -22,19 +23,19 @@ const useStyles = makeStyles({
     width: "70px",
     height: "70px",
     marginTop: 0,
-    borderWidth: '0.5px',
+    borderWidth: "0.5px",
     borderRadius: "35px",
-    borderColor: "white",
+    borderColor: "black",
     borderStyle: "solid",
-    color: "white",
+    color: "black",
     fontWeight: 500,
     fontSize: "12px",
   },
   image: {
     width: "25px",
     height: "25px",
-    filter: "brightness(0) invert(1)"
-  }
+    filter: "brightness(0)",
+  },
 });
 
 export default SocialButton;

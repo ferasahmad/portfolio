@@ -7,6 +7,8 @@ import FadeIn from "react-fade-in";
 // @ts-ignore
 import Clouds from "../assets/clouds.mp4";
 // @ts-ignore
+import Bubble from "../assets/bubble.mp4";
+// @ts-ignore
 import Birds from "../assets/birds.mp4";
 // @ts-ignore
 import Mountain from "../assets/mountain.mp4";
@@ -54,7 +56,7 @@ const useStyles = makeStyles({
     height: "100%",
     background: "transparent",
     textTransform: "uppercase",
-    color: "white",
+    color: "black",
     position: "relative",
   },
   title: {
@@ -102,9 +104,9 @@ const useStyles = makeStyles({
     margin: "12px",
     marginTop: 0,
     borderWidth: "0.5px",
-    borderColor: "white",
+    borderColor: "black",
     borderStyle: "solid",
-    color: "white",
+    color: "black",
     fontWeight: 500,
     fontSize: "12px",
   },
