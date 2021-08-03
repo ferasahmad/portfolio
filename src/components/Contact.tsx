@@ -60,19 +60,6 @@ const useStyles = makeStyles({
     color: "black",
     position: "absolute",
   },
-  button: {
-    margin: "12px",
-    width: "70px",
-    height: "70px",
-    marginTop: 0,
-    borderWidth: "0.5px",
-    borderRadius: "35px",
-    borderColor: "black",
-    borderStyle: "solid",
-    color: "black",
-    fontWeight: 500,
-    fontSize: "12px",
-  },
 });
 
 export default Contact;

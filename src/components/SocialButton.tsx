@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     width: "70px",
     height: "70px",
     marginTop: 0,
-    borderWidth: "0.5px",
+    borderWidth: "1.5px !important",
     borderRadius: "35px",
     borderColor: "black",
     borderStyle: "solid",

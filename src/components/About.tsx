@@ -1,6 +1,8 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
+import FadeIn from "react-fade-in";
+
 import Me from "../assets/me-2.jpg";
 import Mountain from "../assets/mountain.png";
 import MountainCropped from "../assets/mountain-cropped.png";
@@ -9,19 +11,19 @@ function About() {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <FadeIn delay={500} className={classes.container} transitionDuration={1000}>
       <img src={Me} alt="" className={classes.me} />
-      <img src={Mountain} alt="" className={classes.mountain} />
-      <img src={MountainCropped} alt="" className={classes.mountainCropped} />
+      {/* <img src={Mountain} alt="" className={classes.mountain} />
+      <img src={MountainCropped} alt="" className={classes.mountainCropped} /> */}
       <div className={classes.textContainer}>
         <p className={classes.text1}>Hi, I'm Feras</p>
         <p className={classes.text2}>
-          Passionate and detail-orientated Frontend Developer with 3 years of
-          experience building responsive applications specializing in ReactJS
+          Passionate and detail-orientated Frontend Developer with over 2 years
+          of experience building responsive applications specializing in ReactJS
           and React Native.
         </p>
       </div>
-    </div>
+    </FadeIn>
   );
 }
 
@@ -87,7 +89,7 @@ const useStyles = makeStyles({
     },
   },
   me: {
-    height: "400px",
+    height: "450px",
     width: "auto",
     "@media(max-width: 1024px)": {
       height: "300px",

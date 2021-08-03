@@ -27,7 +27,11 @@ function Hero({ onClickAbout, onClickWork, onClickContact }: HeroProps) {
       <video className={classes.video} autoPlay loop muted>
         <source src={Clouds} type="video/mp4" />
       </video>
-      <FadeIn className={classes.container} transitionDuration={900}>
+      <FadeIn
+        delay={500}
+        className={classes.container}
+        transitionDuration={1000}
+      >
         <h1 className={classes.title}>FERAS AHMAD</h1>
         <p className={classes.text}>Front-end Developer</p>
         <div className={classes.buttonsContainer}>
@@ -78,13 +82,6 @@ const useStyles = makeStyles({
     objectFit: "cover",
     zIndex: -2,
   },
-  grain: {
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    objectFit: "cover",
-    opacity: "0.5",
-  },
   text: {
     margin: "20px",
     marginLeft: "25px",
@@ -103,7 +100,7 @@ const useStyles = makeStyles({
   button: {
     margin: "12px",
     marginTop: 0,
-    borderWidth: "0.5px",
+    borderWidth: "1.5px !important",
     borderColor: "black",
     borderStyle: "solid",
     color: "black",
