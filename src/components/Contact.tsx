@@ -8,7 +8,7 @@ import GmailIcon from "../assets/gmail-icon.png";
 import GithubIcon from "../assets/github-icon.png";
 import TwitterLogo from "../assets/twitter-icon.png";
 // @ts-ignore
-import Clouds from "../assets/clouds.mp4";
+import Clouds from "../assets/clouds2.mp4";
 
 function Contact() {
   const classes = useStyles();
