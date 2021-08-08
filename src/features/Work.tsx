@@ -52,6 +52,7 @@ function Work() {
         <Timeline align="alternate">
           {workExperience.map((experience) => (
             <TimelinePoint
+              key={experience.company}
               companyName={experience.company}
               achievementsAndDuties={experience.achievementsAndDuties}
               year={experience.year}

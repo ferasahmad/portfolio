@@ -6,25 +6,31 @@ import FadeIn from "react-fade-in";
 
 // @ts-ignore
 import Clouds from "../assets/clouds.mp4";
-// @ts-ignore
-import Bubble from "../assets/bubble.mp4";
-// @ts-ignore
-import Birds from "../assets/birds.mp4";
-// @ts-ignore
-import Mountain from "../assets/mountain.mp4";
 
 interface HeroProps {
   onClickAbout: () => void;
   onClickWork: () => void;
   onClickContact: () => void;
+  setLoading: any;
 }
 
-function Hero({ onClickAbout, onClickWork, onClickContact }: HeroProps) {
+function Hero({
+  setLoading,
+  onClickAbout,
+  onClickWork,
+  onClickContact,
+}: HeroProps) {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
-      <video className={classes.video} autoPlay loop muted>
+      <video
+        onLoad={setLoading(false)}
+        className={classes.video}
+        autoPlay
+        loop
+        muted
+      >
         <source src={Clouds} type="video/mp4" />
       </video>
       <FadeIn
@@ -104,7 +110,7 @@ const useStyles = makeStyles({
     borderColor: "black",
     borderStyle: "solid",
     color: "black",
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: "12px",
   },
 });

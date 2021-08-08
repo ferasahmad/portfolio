@@ -32,7 +32,9 @@ const TimelinePoint = ({ companyName, year, achievementsAndDuties }: Props) => {
           <h2 className={classes.companyName}>{companyName}</h2>
           <ul className={classes.listContainer}>
             {achievementsAndDuties.map((bulletPoint) => (
-              <li className={classes.listItem}>{bulletPoint}</li>
+              <li key={bulletPoint} className={classes.listItem}>
+                {bulletPoint}
+              </li>
             ))}
           </ul>
         </Paper>

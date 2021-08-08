@@ -1,18 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { scroller, Element } from "react-scroll";
 // @ts-ignore
 import ProgressBar from "react-scroll-progress-bar";
+import FadeIn from "react-fade-in";
 
 import { sendAmplitudeEvent } from "../utilities/amplitude";
 import Hero from "./Hero";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
+import LoadingPage from "../components/LoadingPage";
 
 function Main() {
   const classes = useStyles();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     sendAmplitudeEvent("page visited");
@@ -43,23 +46,26 @@ function Main() {
   };
 
   return (
-    <div className={classes.container}>
+    <>
       <ProgressBar bgcolor="#45b7fe" />
-      <Hero
-        onClickAbout={onClickAbout}
-        onClickWork={onClickWork}
-        onClickContact={onClickContact}
-      />
-      <Element name="about" className={classes.element}>
-        <About />
-      </Element>
-      <Element name="work" style={{ width: "100%" }}>
-        <Work />
-      </Element>
-      <Element name="contact" className={classes.element}>
-        <Contact />
-      </Element>
-    </div>
+      <div className={classes.container}>
+        <Hero
+          setLoading={(value: any) => setLoading(value)}
+          onClickAbout={onClickAbout}
+          onClickWork={onClickWork}
+          onClickContact={onClickContact}
+        />
+        <Element name="about" className={classes.element}>
+          <About />
+        </Element>
+        <Element name="work" style={{ width: "100%" }}>
+          <Work />
+        </Element>
+        <Element name="contact" className={classes.element}>
+          <Contact />
+        </Element>
+      </div>
+    </>
   );
 }
 
@@ -71,6 +77,7 @@ const useStyles = makeStyles({
     fontFamily: "DMSans",
   },
   element: {
+    display: "flex",
     width: "100%",
     height: "100%",
   },

@@ -3,9 +3,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import FadeIn from "react-fade-in";
 
-import Me from "../assets/me-2.jpg";
-import Mountain from "../assets/mountain.png";
-import MountainCropped from "../assets/mountain-cropped.png";
+import Me from "../assets/me.jpg";
 
 function About() {
   const classes = useStyles();
@@ -13,8 +11,6 @@ function About() {
   return (
     <FadeIn delay={500} className={classes.container} transitionDuration={1000}>
       <img src={Me} alt="" className={classes.me} />
-      {/* <img src={Mountain} alt="" className={classes.mountain} />
-      <img src={MountainCropped} alt="" className={classes.mountainCropped} /> */}
       <div className={classes.textContainer}>
         <p className={classes.text1}>Hi, I'm Feras</p>
         <p className={classes.text2}>
