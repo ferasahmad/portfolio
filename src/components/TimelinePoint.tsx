@@ -24,11 +24,11 @@ const TimelinePoint = ({ companyName, year, achievementsAndDuties }: Props) => {
     <TimelineItem>
       <TimelineOppositeContent>{year}</TimelineOppositeContent>
       <TimelineSeparator>
-        <TimelineDot></TimelineDot>
-        <TimelineConnector />
+        <TimelineDot className={classes.timelineDot}></TimelineDot>
+        <TimelineConnector className={classes.timelineConnector} />
       </TimelineSeparator>
       <TimelineContent>
-        <Paper elevation={3} className={classes.timelineItem}>
+        <Paper elevation={0} className={classes.timelineItem}>
           <h2 className={classes.companyName}>{companyName}</h2>
           <ul className={classes.listContainer}>
             {achievementsAndDuties.map((bulletPoint) => (
@@ -45,11 +45,19 @@ const useStyles = makeStyles({
   timelineItem: {
     padding: "50px",
     textAlign: "left",
-    backgroundColor: "white !important",
+    backgroundColor: "white",
     color: "black",
   },
   listContainer: {
     padding: "0px",
+  },
+  timelineDot: {
+    background: "black",
+    boxShadow: "none",
+  },
+  timelineConnector: {
+    background: "white",
+    boxShadow: "none",
   },
   companyName: {
     fontFamily: "MajorMonoDisplay",
