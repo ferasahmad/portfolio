@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // import { initAmplitude } from "./utilities/amplitude";
-import Main from "./components/Main";
+import Main from "./features/Main";
 
 function App() {
   useEffect(() => {

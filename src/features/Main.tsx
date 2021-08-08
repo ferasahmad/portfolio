@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import { makeStyles } from '@material-ui/core/styles';
-import { scroller, Element } from 'react-scroll';
+import { makeStyles } from "@material-ui/core/styles";
+import { scroller, Element } from "react-scroll";
 // @ts-ignore
 import ProgressBar from "react-scroll-progress-bar";
 
@@ -10,7 +10,6 @@ import Hero from "./Hero";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
-
 
 function Main() {
   const classes = useStyles();
@@ -23,7 +22,7 @@ function Main() {
     sendAmplitudeEvent("about button clicked");
 
     scroller.scrollTo("about", {
-      smooth: true
+      smooth: true,
     });
   };
 
@@ -31,7 +30,7 @@ function Main() {
     sendAmplitudeEvent("work button clicked");
 
     scroller.scrollTo("work", {
-      smooth: true
+      smooth: true,
     });
   };
 
@@ -39,22 +38,22 @@ function Main() {
     sendAmplitudeEvent("contact button clicked");
 
     scroller.scrollTo("contact", {
-      smooth: true
+      smooth: true,
     });
   };
 
   return (
     <div className={classes.container}>
       <ProgressBar bgcolor="#45b7fe" />
-      <Hero 
-        onClickAbout={onClickAbout} 
-        onClickWork={onClickWork} 
-        onClickContact={onClickContact} 
+      <Hero
+        onClickAbout={onClickAbout}
+        onClickWork={onClickWork}
+        onClickContact={onClickContact}
       />
       <Element name="about" className={classes.element}>
         <About />
       </Element>
-      <Element name="work" style={{width: "100%"}}>
+      <Element name="work" style={{ width: "100%" }}>
         <Work />
       </Element>
       <Element name="contact" className={classes.element}>
@@ -69,12 +68,12 @@ const useStyles = makeStyles({
     width: "100%",
     height: "100%",
     background: "transparent",
-    fontFamily: "DMSans"
+    fontFamily: "DMSans",
   },
   element: {
     width: "100%",
     height: "100%",
-  }
+  },
 });
 
 export default Main;
