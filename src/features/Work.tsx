@@ -49,7 +49,7 @@ function Work() {
         <source src={Birds} type="video/mp4" />
       </video>
       <div>
-        <Timeline align="alternate">
+        <Timeline align={window.innerWidth <= 550 ? "left" : "alternate"}>
           {workExperience.map((experience) => (
             <TimelinePoint
               key={experience.company}
